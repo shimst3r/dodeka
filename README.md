@@ -6,8 +6,8 @@
 >
 > Greek word for the number 12
 
-`dodeka` is a command line tool for tracking the degree of fulfilment of [The Twelve-Factor App][1]. Use it in your projects to test whether they conform to the
-methodology for developing solid web apps that originated within [Heroku](https://www.heroku.com).
+`dodeka` is a command line tool for tracking the degree of fulfilment of [The Twelve-Factor App][1] methodology. Use it in your projects to test whether they conform
+to the principles for developing solid web apps that originated within [Heroku](https://www.heroku.com).
 
 ## About The Twelve-Factor App
 
