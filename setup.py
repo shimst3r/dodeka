@@ -32,6 +32,7 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     description="Twelve-Factor App Checker",
+    download_url="https://github.com/shimst3r/dodeka/archive/0.1.0.tar.gz",
     install_requires=REQUIRES,
     keywords=["cli", "tool", "twelvefactor"],
     license="MIT",
