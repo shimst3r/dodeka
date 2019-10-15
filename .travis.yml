@@ -10,7 +10,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - black --check
-  - mypy
-  - pylint --errors-only
-  - pytest
+  - black --check dodeka/
+  - mypy dodeka/
+  - pylint --errors-only dodeka/
+  - pytest dodeka/
