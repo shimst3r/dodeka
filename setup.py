@@ -10,7 +10,7 @@ License: MIT, see https://opensource.org/licenses/MIT
 
 from setuptools import setup
 
-__version__ = "0.0.1"
+__version__ = "0.1.1"
 
 with open("README.md", "r", encoding="utf-8") as f_in:
     LONG_DESCRIPTION = f_in.read()
@@ -32,7 +32,7 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     description="Twelve-Factor App Checker",
-    download_url="https://github.com/shimst3r/dodeka/archive/0.1.0.tar.gz",
+    download_url="https://github.com/shimst3r/dodeka/archive/0.1.1.tar.gz",
     install_requires=REQUIRES,
     keywords=["cli", "tool", "twelvefactor"],
     license="MIT",
