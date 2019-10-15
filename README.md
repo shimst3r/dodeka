@@ -55,7 +55,7 @@ In one of the next releases, this will be implemented as a command line interfac
 The test suite is based on the great [`pytest`][2] library. Once installed, the automatic test discovery can be used via
 
 ```sh
-pytest dudeka
+pytest dodeka
 ```
 
 ## How to Contribute
