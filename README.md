@@ -31,9 +31,9 @@ Quoting [1]:
 Especially in agile teams, the day to day work can already be quite stressful, so that important details like the 12 factors can be overlooked easily. `dodeka` can
 be used as a continuous reminder: Once created, the checklist is a living artefact that can be discussed, updated, and used to track progress.
 
-The vision of `dodeka` goes way beyond a mere checklist: As a huge fan of [continuous delivery][2], I envision the tool to be used as naturally as type checkers or
-code linters, to ensure that your web app sticks as close to the 12 factors as you want it to. Therefore `dodeka` will incorporate mechanisms to vet your code, your
-repository, and your config files (if present).
+The vision of `dodeka` goes way beyond a mere checklist: As a huge fan of [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery),
+ I envision the tool to be used as naturally as type checkers or code linters, to ensure that your web app sticks as close to the 12 factors as you want it to. 
+ Therefore `dodeka` will incorporate mechanisms to vet your code, your repository, and your config files (if present).
 
 This is a very ambitious undertaking. If you want to join me, see the [How to Contribute](#how-to-contribute) section.
 
@@ -52,7 +52,7 @@ In one of the next releases, this will be implemented as a command line interfac
 
 ## How to Test
 
-The test suite is based on the great [`pytest`][3] library. Once installed, the automatic test discovery can be used via
+The test suite is based on the great [`pytest`][2] library. Once installed, the automatic test discovery can be used via
 
 ```sh
 pytest dudeka
@@ -74,7 +74,7 @@ PRs have to comply with:
 * [`mypy`](http://mypy-lang.org),
 * and [`pylint`](https://www.pylint.org).
 
-New features must be covered by proper tests (idealy unit tests and functional tests) using the [`pytest`][3] framework.
+New features must be covered by proper tests (idealy unit tests and functional tests) using the [`pytest`][2] library.
 
 ## Contributors
 
@@ -103,5 +103,4 @@ New features must be covered by proper tests (idealy unit tests and functional t
 > SOFTWARE.
 
 [1]: https://12factor.net
-[2]: https://en.wikipedia.org/wiki/Continuous_delivery
-[3]: http://pytest.org/en/latest/
+[2]: http://pytest.org/en/latest/
