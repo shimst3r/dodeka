@@ -10,33 +10,65 @@ twelve-factor app checklist.
 License: MIT, see https://opensource.org/licenses/MIT
 """
 
+from dataclasses import dataclass
 from typing import List, Tuple
 
+import jinja2
 
-def generate_factors() -> List[Tuple[str, str]]:
+FACTORS = (
+    ("I. Codebase", "One codebase tracked in revision control, many deploys"),
+    ("II. Dependencies", "Explicitly declare and isolate dependencies"),
+    ("III. Config", "Store config in the environment"),
+    ("IV. Backing services", "Treat backing services as attached resources"),
+    ("V. Build, release, run", "Strictly separate build and run stages"),
+    ("VI. Processes", "Execute the app as one or more stateless processes"),
+    ("VII. Port binding", "Export services via port binding"),
+    ("VIII. Concurrency", "Scale out via the process model"),
+    (
+        "IX. Disposability",
+        "Maximize robustness with fast startup and graceful shutdown",
+    ),
+    (
+        "X. Dev/prod parity",
+        "Keep development, staging, and production as similar as possible",
+    ),
+    ("XI. Logs", "Treat logs as event streams"),
+    ("XII. Admin processes", "Run admin/management tasks as one-off processes"),
+)
+
+
+@dataclass
+class Factor:
     """
-    generate_factors returns a list of tuples containing the twelve factors.
+    Factor implements a basic interface for easier use in templates.
+    """
+
+    title: str
+    short_description: str
+
+
+def generate_factors() -> List[Factor]:
+    """
+    generate_factors returns a list of Factors containing the twelve factors.
 
     >>> generate_factors()[0]
-    ("I. Codebase", "One codebase tracked in revision control, many deploys") 
+    Factor(title='I. Codebase', short_description='One codebase tracked in revision control, many deploys') 
     """
     return [
-        ("I. Codebase", "One codebase tracked in revision control, many deploys"),
-        ("II. Dependencies", "Explicitly declare and isolate dependencies"),
-        ("III. Config", "Store config in the environment"),
-        ("IV. Backing services", "Treat backing services as attached resources"),
-        ("V. Build, release, run", "Strictly separate build and run stages"),
-        ("VI. Processes", "Execute the app as one or more stateless processes"),
-        ("VII. Port binding", "Export services via port binding"),
-        ("VIII. Concurrency", "Scale out via the process model"),
-        (
-            "IX. Disposability",
-            "Maximize robustness with fast startup and graceful shutdown",
-        ),
-        (
-            "X. Dev/prod parity",
-            "Keep development, staging, and production as similar as possible",
-        ),
-        ("XI. Logs", "Treat logs as event streams"),
-        ("XII. Admin processes", "Run admin/management tasks as one-off processes"),
+        Factor(title=title, short_description=short_description)
+        for title, short_description in FACTORS
     ]
+
+
+def generate_checklist(factors: List[Factor]) -> str:
+    """
+    generate_checklist uses the Jinja2 template engine to generate a markdown
+    formatted document that renders all Factor entities provided by `factors`.
+    """
+
+    template_loader = jinja2.FileSystemLoader(searchpath=".")
+    template_environment = jinja2.Environment(loader=template_loader)
+    template = template_environment.get_template("template.md")
+
+    checklist = template.render(factors=factors)
+
