@@ -17,7 +17,7 @@ with open("README.md", "r", encoding="utf-8") as f_in:
 
 PACKAGES = ["dodeka"]
 
-REQUIRES = ["Click"]
+REQUIRES = ["Click", "jinja2"]
 
 setup(
     author="Nils P. Müller",
