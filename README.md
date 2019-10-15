@@ -104,4 +104,4 @@ New features must be covered by proper tests (idealy unit tests and functional t
 
 [1]: https://12factor.net
 [2]: https://en.wikipedia.org/wiki/Continuous_delivery
-[3]: https://www.pylint.org
+[3]: http://pytest.org/en/latest/
