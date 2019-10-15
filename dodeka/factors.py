@@ -76,4 +76,3 @@ def generate_checklist(factors: List[Factor]) -> str:
     checklist = template.render(factors=factors)
 
     return checklist
-
