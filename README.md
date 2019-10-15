@@ -9,6 +9,16 @@
 `dodeka` is a command line tool for tracking the degree of fulfilment of [The Twelve-Factor App][1] methodology. Use it in your projects to test whether they conform
 to the principles for developing solid web apps that originated within [Heroku](https://www.heroku.com).
 
+## Table of Contents
+
+* [About The Twelve-Factor App](#about-the-twelve-factor-app)
+* [About `dodeka`](#about-dodeka)
+* [Usage Examples](#usage-examples)
+* [How to Test](#how-to-test)
+* [How to Contribute](#how-to-contribute)
+* [Contributors](#contributors)
+* [License](#license)
+
 ## About The Twelve-Factor App
 
 Quoting [1]:
