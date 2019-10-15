@@ -10,6 +10,7 @@ twelve-factor app checklist.
 License: MIT, see https://opensource.org/licenses/MIT
 """
 
+import os.path
 from dataclasses import dataclass
 from typing import List, Tuple
 
@@ -66,9 +67,13 @@ def generate_checklist(factors: List[Factor]) -> str:
     formatted document that renders all Factor entities provided by `factors`.
     """
 
-    template_loader = jinja2.FileSystemLoader(searchpath=".")
-    template_environment = jinja2.Environment(loader=template_loader)
-    template = template_environment.get_template("template.md")
+    template_environment = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(searchpath=os.path.abspath(".")),
+        keep_trailing_newline=True,
+    )
+    template = template_environment.get_template("dodeka/template.md")
 
     checklist = template.render(factors=factors)
+
+    return checklist
 
