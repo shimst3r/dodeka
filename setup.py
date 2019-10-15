@@ -17,9 +17,7 @@ with open("README.md", "r", encoding="utf-8") as f_in:
 
 PACKAGES = ["dodeka"]
 
-with open("requirements.txt", "r", encoding="utf-8") as f_in:
-    # skip the first line which contains meta data
-    REQUIRES = [line.strip() for line in f_in.readlines()[1:]]
+REQUIRES = ["Click"]
 
 setup(
     author="Nils P. Müller",
