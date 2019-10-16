@@ -58,7 +58,11 @@ list_of_factors = factors.generate_factors()
 print(factors.generate_checklist(factors=list_of_factors))
 ```
 
-In one of the next releases, this will be implemented as a command line interface.
+If installed from PyPI, `dodeka` can also be used from the command line:
+
+```sh
+dodeka --help
+```
 
 ## How to Test
 

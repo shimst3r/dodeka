@@ -10,10 +10,17 @@ License: MIT, see https://opensource.org/licenses/MIT
 
 from setuptools import setup
 
-__version__ = "0.1.1"
+import m2r
 
+__version__ = "0.2.0"
+
+ENTRY_POINTS = {"console_scripts": ["dodeka = dodeka.interface:dodeka"]}
+
+# The README is written using markdown, PyPI expects the long description
+# to be written in reStructuredText. Thus the `m2r` converter is used
+# for converting between the two.
 with open("README.md", "r", encoding="utf-8") as f_in:
-    LONG_DESCRIPTION = f_in.read()
+    LONG_DESCRIPTION = m2r.convert(f_in.read())
 
 PACKAGES = ["dodeka"]
 
@@ -30,7 +37,8 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     description="Twelve-Factor App Checker",
-    download_url="https://github.com/shimst3r/dodeka/archive/0.1.1.tar.gz",
+    download_url=f"https://github.com/shimst3r/dodeka/archive/{__version__}.tar.gz",
+    entry_points=ENTRY_POINTS,
     install_requires=REQUIRES,
     keywords=["cli", "tool", "twelvefactor"],
     license="MIT",
