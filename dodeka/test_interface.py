@@ -25,10 +25,47 @@ def test_dodeka_help():
         "  within Heroku.\n"
         "\n"
         "Options:\n"
-        "  --help  Show this message and exit.\n"
+        "  --print  Prints the twelve factors to stdout.\n"
+        "  --help   Show this message and exit.\n"
     )
 
     runner = click.testing.CliRunner()
     actual = runner.invoke(interface.dodeka, args=["--help"]).output
+
+    assert actual == expected
+
+
+def test_dodeka_print():
+    expected = (
+        "# Twelve-Factor App Checklist\n"
+        "\n"
+        "- [ ] I. Codebase: One codebase tracked in revision control, many deploys\n"
+        "\n"
+        "- [ ] II. Dependencies: Explicitly declare and isolate dependencies\n"
+        "\n"
+        "- [ ] III. Config: Store config in the environment\n"
+        "\n"
+        "- [ ] IV. Backing services: Treat backing services as attached resources\n"
+        "\n"
+        "- [ ] V. Build, release, run: Strictly separate build and run stages\n"
+        "\n"
+        "- [ ] VI. Processes: Execute the app as one or more stateless processes\n"
+        "\n"
+        "- [ ] VII. Port binding: Export services via port binding\n"
+        "\n"
+        "- [ ] VIII. Concurrency: Scale out via the process model\n"
+        "\n"
+        "- [ ] IX. Disposability: Maximize robustness with fast startup and graceful shutdown\n"
+        "\n"
+        "- [ ] X. Dev/prod parity: Keep development, staging, and production as similar as possible\n"
+        "\n"
+        "- [ ] XI. Logs: Treat logs as event streams\n"
+        "\n"
+        "- [ ] XII. Admin processes: Run admin/management tasks as one-off processes\n"
+        "\n"
+    )
+
+    runner = click.testing.CliRunner()
+    actual = runner.invoke(interface.dodeka, args=["--print"]).output
 
     assert actual == expected
