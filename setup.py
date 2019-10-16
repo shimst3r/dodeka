@@ -12,7 +12,7 @@ from setuptools import setup
 
 import m2r
 
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 ENTRY_POINTS = {"console_scripts": ["dodeka = dodeka.interface:dodeka"]}
 

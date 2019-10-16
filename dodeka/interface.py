@@ -14,10 +14,16 @@ from dodeka import factors
 
 
 @click.command()
-def dodeka():
+@click.option("--print", is_flag=True, help="Prints the twelve factors to stdout.")
+def dodeka(print):
     """
     dodeka is a command line tool for tracking the degree of fulfilment of The
     Twelve-Factor App methodology. Use it in your projects to test whether they
     conform to the principles for developing solid web apps that originated
     within Heroku.
     """
+
+    if print:
+        click.echo(
+            factors.generate_checklist(factors=factors.generate_factors()), nl=False
+        )
