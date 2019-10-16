@@ -42,7 +42,7 @@ Especially in agile teams, the day to day work can already be quite stressful, s
 be used as a continuous reminder: Once created, the checklist is a living artefact that can be discussed, updated, and used to track progress.
 
 The vision of `dodeka` goes way beyond a mere checklist: As a huge fan of [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery),
- I envision the tool to be used as naturally as type checkers or code linters, to ensure that your web app sticks as close to the 12 factors as you want it to. 
+ I envision the tool to be used as naturally as type checkers or code linters, to ensure that your web app sticks as close to the 12 factors as you want it to.
  Therefore `dodeka` will incorporate mechanisms to vet your code, your repository, and your config files (if present).
 
 This is a very ambitious undertaking. If you want to join me, see the [How to Contribute](#how-to-contribute) section.
@@ -62,6 +62,12 @@ If installed from PyPI, `dodeka` can also be used from the command line:
 
 ```sh
 dodeka --help
+```
+
+To print a markdown-formatted checklist to standard output, use the following command:
+
+```sh
+dodeka --print
 ```
 
 ## How to Test
