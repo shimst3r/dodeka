@@ -68,7 +68,7 @@ def generate_checklist(factors: List[Factor]) -> str:
     """
 
     template_environment = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(searchpath=os.path.abspath(".")),
+        loader=jinja2.FileSystemLoader(searchpath=os.path.abspath("./")),
         keep_trailing_newline=True,
     )
     template = template_environment.get_template("dodeka/template.md")
