@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/shimst3r/dodeka.svg?branch=master)](https://travis-ci.org/shimst3r/dodeka)
 
+![The dodeka logo is a grey 12-sided dice with the Python logo on a front-facing surface.](./logo_dodeka.png)
+
 > δώδεκα (/ˈðoðeka/)
 >
 > Greek word for the number 12
@@ -98,7 +100,8 @@ New features must be covered by proper tests (idealy unit tests and functional t
 
 ## Contributors
 
-* [shimst3r](https://twitter.com/shimst3r)
+* [shimst3r](https://twitter.com/shimst3r) :: Core Maintainer
+* [verapinselt](https://instagram.com/verapinselt) :: Logo Designer
 
 ## License
 
