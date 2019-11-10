@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/shimst3r/dodeka.svg?branch=master)](https://travis-ci.org/shimst3r/dodeka)
 
-![The dodeka logo is a grey 12-sided dice with the Python logo on a front-facing surface.](./logo_dodeka.png)
+<p align="center"><img src="./logo_dodeka.png" alt="The dodeka logo is a grey 12-sided dice with the Python logo on a front-facing surface" width="200"></p>
 
 > δώδεκα (/ˈðoðeka/)
 >
